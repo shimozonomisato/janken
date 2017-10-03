@@ -1,11 +1,12 @@
 <?php
-//エスケープ
-//function h($s) {
-//  return htmlspecislchars($s, ENT_QUOTES, 'UTF-8');
-//}
-//h($choice);
+//エスケープを関数で定義
+function h($s) {
+  return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
+}
 
 $choice = $_POST['choice'];
+
+h($choice);
 
 //プレイヤーの手を配列に入れる
 if ($choice == "グー") {
